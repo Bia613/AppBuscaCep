@@ -1,4 +1,7 @@
-﻿namespace AppBuscaCep
+﻿using AppBuscaCep.Models;
+using AppBuscaCep.Services;
+
+namespace AppBuscaCep
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +12,18 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+       
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
+            try
+            {
+                List<Bairro> arr_bairros = await dataser
+            }
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 
